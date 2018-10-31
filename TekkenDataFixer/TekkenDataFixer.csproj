@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A938869-65EE-46C9-84B1-98EBD4ADB0D0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TekkenDataFixer</RootNamespace>
+    <AssemblyName>TekkenDataFixer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\AKUMA_.cs" />
+    <Compile Include="Entity\ALISA_.cs" />
+    <Compile Include="Entity\ASUKA_.cs" />
+    <Compile Include="Entity\BOB_.cs" />
+    <Compile Include="Entity\BRYAN_.cs" />
+    <Compile Include="Entity\CLAUDIO_.cs" />
+    <Compile Include="Entity\DEVIL_JIN_.cs" />
+    <Compile Include="Entity\DRAGUNOV_.cs" />
+    <Compile Include="Entity\EDDY_.cs" />
+    <Compile Include="Entity\ELIZA_.cs" />
+    <Compile Include="Entity\FENG_.cs" />
+    <Compile Include="Entity\GEESE_.cs" />
+    <Compile Include="Entity\GIGAS_.cs" />
+    <Compile Include="Entity\HEIHACHI_.cs" />
+    <Compile Include="Entity\HWOARANG_.cs" />
+    <Compile Include="Entity\JACK7_.cs" />
+    <Compile Include="Entity\JIN_.cs" />
+    <Compile Include="Entity\JOSIE_.cs" />
+    <Compile Include="Entity\KATARINA_.cs" />
+    <Compile Include="Entity\KAZUMI_.cs" />
+    <Compile Include="Entity\KAZUYA_.cs" />
+    <Compile Include="Entity\KING_.cs" />
+    <Compile Include="Entity\KUMA_.cs" />
+    <Compile Include="Entity\LARS_.cs" />
+    <Compile Include="Entity\LAW_.cs" />
+    <Compile Include="Entity\LEE_.cs" />
+    <Compile Include="Entity\LEO_.cs" />
+    <Compile Include="Entity\LILI_.cs" />
+    <Compile Include="Entity\LUCKY_CHLOE_.cs" />
+    <Compile Include="Entity\MASTER_RAVEN_.cs" />
+    <Compile Include="Entity\MIGUEL_.cs" />
+    <Compile Include="Entity\NINA_.cs" />
+    <Compile Include="Entity\NOCTIS_.cs" />
+    <Compile Include="Entity\PAUL_.cs" />
+    <Compile Include="Entity\SHAHEEN_.cs" />
+    <Compile Include="Entity\STEVE_.cs" />
+    <Compile Include="Entity\%28TekkenModel%29.cs" />
+    <Compile Include="Entity\XIAOYU_.cs" />
+    <Compile Include="Entity\YOSHIMITSU_.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
