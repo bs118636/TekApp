@@ -1,0 +1,3 @@
+git config --global http.proxy bcpxy.nycnet:8080
+
+git clone http://github.com/bs118636/TekApp.git "C:/Users/bscott1/Desktop/TekApp"

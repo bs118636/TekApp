@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="TekkenApp.UserControls.MoveList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TekkenApp.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/TekkenApp;component/Dictionary.xaml" />
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10,10,10,0" HorizontalAlignment="Left">
+            <TextBlock Text="Character" Style="{StaticResource TextBlockStyle}"/>
+            <ComboBox x:Name="CharacterDropDown" Width="250" MaxWidth="500"
+                      ItemsSource="{Binding CharacterList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedItem="{Binding SelectedCharacter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedValuePath="Id"
+                      DisplayMemberPath="CharacterName"
+                      />
+
+        </StackPanel>
+
+        <DataGrid Grid.Row="1"
+                  x:Name="MoveListDataGrid"
+                  Style="{StaticResource DataGridStyle}"
+                  ItemsSource="{Binding MoveList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedValue="{Binding SelectedMove, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  RowStyle="{StaticResource DataGridRowStyle}"
+                  CellStyle="{StaticResource DataGridCellStyle}"
+                  >
+            
+            
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="MoveId" Binding="{Binding MoveId}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Command" Binding="{Binding Command}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Hit Level" Binding="{Binding HitLevel}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Damage" Binding="{Binding Damage}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Start Up Frames" Binding="{Binding StartUpFrame}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Block Frame" Binding="{Binding BlockFrame}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Hit Frame" Binding="{Binding HitFrame}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Counter Hit Frame" Binding="{Binding CounterHitFrame}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Notes" Binding="{Binding Notes}" IsReadOnly="True" />
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        
+    </Grid>
+</UserControl>

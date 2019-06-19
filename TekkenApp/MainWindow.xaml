@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TekkenApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Closed="Window_Closed"
+        Icon="tekkenicon2.ico"
+        Title="{Binding WindowTitle}" Height="450" Width="900">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Row 1 -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="0" Grid.ColumnSpan="3" Fill="AntiqueWhite"/>
+
+
+            <Menu Grid.Row="0" Grid.Column="0" Background="AntiqueWhite">
+                <MenuItem Header="Options" ItemsSource="{Binding OptionsMenu, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <MenuItem Header="Menu" 
+                          IsEnabled="True"
+                          ItemsSource="{Binding MenuHandler.MenuItemList}" />
+            </Menu>
+            
+        </Grid>
         
+        <!-- Row 2 -->
+        <ContentControl Grid.Row="1" x:Name="UserControl"
+                        Content="{Binding MenuHandler.ActiveUserControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        />
+
     </Grid>
 </Window>

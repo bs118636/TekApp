@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekkenApp", "TekkenApp\Tekk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekkenDataFixer", "TekkenDataFixer\TekkenDataFixer.csproj", "{7A938869-65EE-46C9-84B1-98EBD4ADB0D0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71C33DD4-B14C-432D-AE4F-3548DACA3C73}"
+	ProjectSection(SolutionItems) = preProject
+		TekkenApp\bin\Debug\x86\SQLite.Interop.dll = TekkenApp\bin\Debug\x86\SQLite.Interop.dll
+		Tekkendb.db = Tekkendb.db
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekkenDbFixer", "TekkenDbFixer\TekkenDbFixer.csproj", "{FBC2E483-8776-47DF-8D61-C62987A7C3EE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Test", "Test\Test.vdproj", "{58B37B65-D9C0-4830-8BBD-7D7F270D5029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +31,12 @@ Global
 		{7A938869-65EE-46C9-84B1-98EBD4ADB0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A938869-65EE-46C9-84B1-98EBD4ADB0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A938869-65EE-46C9-84B1-98EBD4ADB0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC2E483-8776-47DF-8D61-C62987A7C3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC2E483-8776-47DF-8D61-C62987A7C3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC2E483-8776-47DF-8D61-C62987A7C3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC2E483-8776-47DF-8D61-C62987A7C3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B37B65-D9C0-4830-8BBD-7D7F270D5029}.Debug|Any CPU.ActiveCfg = Debug
+		{58B37B65-D9C0-4830-8BBD-7D7F270D5029}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
